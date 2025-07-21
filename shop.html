@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailora-pet essential shop</title>
+  <!--Bootstrap css link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <!--slick slider-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <!--google icon-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <!--Custome css-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+  <!--offer tag-->
+  <div class="offer-tag">
+    <div class="container">
+      <ul class="list-group list-group-horizontal d-flex justify-content-center">
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Free Shipping Over $49
+        </li>
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Join Taillora Rewards Today!
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Navigation-->
+  <div class="menu-bar sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-white sticky-top">
+        <a class="navbar-brand" href="index.html">
+          <img src="./Images/logo.png" alt="">
+        </a>
+
+        <!-- Icons for Small Devices -->
+        <div class="d-flex d-lg-none align-items-center ms-auto">
+          <a href="#" class="px-2" id="searchToggle">
+          <img src="Images/Search.svg" alt="">
+        </a>    
+          <a href="cart.html" class="position-relative px-2">
+            <img src="Images/Shopping cart.svg" alt="">
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+          <a href="login.html" class="px-2">
+            <img src="Images/User.svg" alt="">
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="offer.html">Offer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="learn.html">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+          </ul>
+
+          <!-- Icons for Large Devices -->
+          <div class="searh-icon d-none d-lg-flex justify-content-between align-items-center pe-2">
+            <form class="position-relative icons" role="search">
+              <input type="text" class="form-control border-0 rounded-0 border-bottom" placeholder="Search...">
+              <span class="position-absolute top-50 end-0 translate-middle-y text-muted" style="pointer-events: none;">
+                <img src="Images/Search.svg" alt="">
+              </span>
+            </form>
+            <div class="wishlist icons position-relative">
+              <a href="wishlist.html">
+                <img src="./Images/Heart.svg" alt="">
+                <span
+                  class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </a>
+            </div>
+            <div class="cart icons position-relative">
+              <a href="cart.html">
+                <img src="./Images/Shopping cart.svg" alt="">
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </a>
+            </div>
+            <div class="login icons">
+              <a href="login.html">
+                <img src="./Images/User.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hidden Search Bar for Small Devices -->
+      <div id="mobileSearchBar" class="d-lg-none p-2" style="display:none;">
+  <form class="position-relative icons" role="search" onsubmit="return false;">
+    <input type="text" class="form-control border-0 rounded-0 border-bottom" id="searchInput" placeholder="Search...">
+    <button type="button" id="searchButton" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y" style="background: none; border: none; padding: 0;">
+      <img src="Images/Search.svg" alt="">
+    </button>
+  </form>
+</div>
+
+    </div>
+  </div>
+  <!--inner banner sec-->
+  <div class="inner-banner container-fluid">
+    <div class="container">
+      <div class="inner-banner-heading text-center">
+        <h2>Products</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid product-listing">
+    <div class="container">
+      <div class="row">
+        <!--Filter side panel-->
+        <!-- Filter Toggle Button for Small Devices -->
+        <div class="d-block d-md-none mb-3">
+          <button class="btn btn-outline-primary w-100" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mobileFilterPanel" aria-expanded="false" aria-controls="mobileFilterPanel">
+            <span><img src="Images/filter.svg" alt="" style="width:20px;" class="me-2"></span>Show Filters
+          </button>
+        </div>
+        <!-- Desktop/Tablet Filter Panel -->
+        <div class="col-lg-3 col-md-4 d-none d-md-block">
+          <!--Select Zip code-->
+          <div class="delivering-address d-flex justify-content-between align-items-center">
+            <p class="m-0"><span><img src="Images/delivery-truck 1.svg" alt="" class="me-2"></span>Delivering to</p>
+            <button class="btn dropdown-toggle del-add" data-bs-toggle="modal" data-bs-target="#zipModal"
+              id="zipButton">
+              <span id="selectedZip">700100</span>
+            </button>
+            <!-- ZIP Code Modal -->
+            <div class="modal fade" id="zipModal" tabindex="-1" aria-labelledby="zipModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="zipModalLabel">Select or Enter ZIP Code</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <strong>Choose from list:</strong>
+                    <div class="list-group mb-3" style="max-height: 150px; overflow-y: auto;">
+                      <button type="button" class="list-group-item list-group-item-action"
+                        onclick="selectZip('700001')">700001</button>
+                      <button type="button" class="list-group-item list-group-item-action"
+                        onclick="selectZip('700002')">700002</button>
+                      <button type="button" class="list-group-item list-group-item-action"
+                        onclick="selectZip('700003')">700003</button>
+                      <button type="button" class="list-group-item list-group-item-action"
+                        onclick="selectZip('700004')">700004</button>
+                      <button type="button" class="list-group-item list-group-item-action"
+                        onclick="selectZip('700005')">700005</button>
+                      <button type="button" class="list-group-item list-group-item-action"
+                        onclick="selectZip('700006')">700006</button>
+                    </div>
+                    <strong>Or enter manually:</strong>
+                    <input type="text" id="manualZip" class="form-control mb-2" placeholder="Enter ZIP Code"
+                      maxlength="6">
+                    <button class="btn btn-primary w-100" onclick="updateZip()">Update ZIP</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--filters-->
+          <div class="filterList mt-4">
+            <div class="filter-head d-flex justify-content-between align-items-center mt-2">
+              <h4>Filter</h4>
+              <a href="#" alt="Reset-btn" class="reset-btn text-decoration-none">
+                <span><img src="Images/reset.svg" alt=""> Reset</span>
+              </a>
+            </div>
+            <hr>
+            <div class="dropdown-category">
+              <div class="accordion border-0" id="accordionExample">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Pet Type
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeAll" value="All"
+                              checked>
+                            <label class="form-check-label" for="petTypeAll">All</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeDog"
+                              value="Dog">
+                            <label class="form-check-label" for="petTypeDog">Dog</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeCat"
+                              value="Cat">
+                            <label class="form-check-label" for="petTypeCat">Cat</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeBird"
+                              value="Bird">
+                            <label class="form-check-label" for="petTypeBird">Bird</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeFish"
+                              value="Fish">
+                            <label class="form-check-label" for="petTypeFish">Fish</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeRabbit"
+                              value="Rabbit">
+                            <label class="form-check-label" for="petTypeRabbit">Rabbit</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="petTypeRadio" id="petTypeHorse"
+                              value="Horse">
+                            <label class="form-check-label" for="petTypeHorse">Horse</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Product Category
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="productCategoryRadio" id="categoryAll"
+                              value="All" checked>
+                            <label class="form-check-label" for="categoryAll">All</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="productCategoryRadio" id="categoryFood"
+                              value="Food">
+                            <label class="form-check-label" for="categoryFood">Food</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="productCategoryRadio"
+                              id="categoryAccessories" value="Accessories">
+                            <label class="form-check-label" for="categoryAccessories">Accessories</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="productCategoryRadio" id="categoryTreats"
+                              value="Treats">
+                            <label class="form-check-label" for="categoryTreats">Treats</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Brand
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandAll" value="All"
+                              checked>
+                            <label class="form-check-label" for="brandAll">All</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandPedigree "
+                              value="Pedigree">
+                            <label class="form-check-label" for="brandPedigree">Pedigree</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandWhiskas"
+                              value="Whiskas">
+                            <label class="form-check-label" for="brandWhiskas">Whiskas</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandDrools"
+                              value="Drools">
+                            <label class="form-check-label" for="brandDrools">Drools</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandWhekraft"
+                              value="Whekraft">
+                            <label class="form-check-label" for="brandWhekraft">Whekraft</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandHippiDoggy"
+                              value="HippiDoggy">
+                            <label class="form-check-label" for="brandHippiDoggy">HippiDoggy</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="brandRadio" id="brandNoFilde"
+                              value="NO FILDE">
+                            <label class="form-check-label" for="brandNoFilde">NO FILDE</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Price Range
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <input type="range" class="form-range" min="0" max="10000" step="100" id="priceRange">
+                      <div class="d-flex justify-content-between">
+                        <span id="priceRangeMin">₹0</span>
+                        <span id="priceRangeMax">₹10000+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Age Suitability
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="ageSuitabilityRadio" id="ageAll"
+                              value="All" checked>
+                            <label class="form-check-label" for="ageAll">All</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="ageSuitabilityRadio" id="agePuppyKitten"
+                              value="Puppy/Kitten">
+                            <label class="form-check-label" for="agePuppyKitten">Puppy/Kitten</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="ageSuitabilityRadio" id="ageAdult"
+                              value="Adult">
+                            <label class="form-check-label" for="ageAdult">Adult</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="ageSuitabilityRadio" id="ageSenior"
+                              value="Senior">
+                            <label class="form-check-label" for="ageSenior">Senior</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      Availability
+                    </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="inStockCheck">
+                        <label class="form-check-label" for="inStockCheck">
+                          In Stock
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      Offers & Discounts
+                    </button>
+                  </h2>
+                  <div id="collapseSeven" class="accordion-collapse collapse border-0" aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="offersDiscountsRadio" id="offersAll"
+                              value="All" checked>
+                            <label class="form-check-label" for="offersAll">All</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="offersDiscountsRadio" id="offersOnSale"
+                              value="On Sale">
+                            <label class="form-check-label" for="offersOnSale">On Sale</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="offersDiscountsRadio"
+                              id="offersClearance" value="Clearance">
+                            <label class="form-check-label" for="offersClearance">Clearance</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="offersDiscountsRadio"
+                              id="offersNewCustomer" value="New Customer Offer">
+                            <label class="form-check-label" for="offersNewCustomer">New Customer Offer</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro-add d-md-block d-none">
+            <h3 class="dis-off">50% OFF</h3>
+            <p class="dis-off-text">On your first order</p>
+            <button class="btn btn-primary shopNow">Shop Now</button>
+            <img src="Images/pro-add.png" alt="" class="img-fluid">
+        </div>
+        </div>
+        <!-- Mobile Filter Panel (Accordion) -->
+        <div class="col-12 d-block d-md-none mobbile-filter-panel">
+          <div class="collapse" id="mobileFilterPanel">
+            <div class="card card-body p-2 mb-3">
+              <!-- Place the filterList code here for mobile -->
+              <div class="filterList mt-2">
+                <div class="filter-head d-flex justify-content-between align-items-center mt-2">
+                  <h4>Filter</h4>
+                  <a href="#" alt="Reset-btn" class="reset-btn text-decoration-none">
+                    <span><img src="Images/reset.svg" alt=""> Reset</span>
+                  </a>
+                </div>
+                <hr>
+                <div class="dropdown-category">
+                  <div class="accordion border-0" id="accordionExampleMobile">
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingOneMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOneMobile" aria-expanded="true" aria-controls="collapseOneMobile">
+                          Pet Type
+                        </button>
+                      </h2>
+                      <div id="collapseOneMobile" class="accordion-collapse collapse show"
+                        aria-labelledby="headingOneMobile" data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeAllMobile" value="All" checked>
+                                <label class="form-check-label" for="petTypeAllMobile">All</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeDogMobile" value="Dog">
+                                <label class="form-check-label" for="petTypeDogMobile">Dog</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeCatMobile" value="Cat">
+                                <label class="form-check-label" for="petTypeCatMobile">Cat</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeBirdMobile" value="Bird">
+                                <label class="form-check-label" for="petTypeBirdMobile">Bird</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeFishMobile" value="Fish">
+                                <label class="form-check-label" for="petTypeFishMobile">Fish</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeRabbitMobile" value="Rabbit">
+                                <label class="form-check-label" for="petTypeRabbitMobile">Rabbit</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="petTypeRadioMobile"
+                                  id="petTypeHorseMobile" value="Horse">
+                                <label class="form-check-label" for="petTypeHorseMobile">Horse</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product Category -->
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingTwoMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwoMobile" aria-expanded="false" aria-controls="collapseTwoMobile">
+                          Product Category
+                        </button>
+                      </h2>
+                      <div id="collapseTwoMobile" class="accordion-collapse collapse" aria-labelledby="headingTwoMobile"
+                        data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="productCategoryRadioMobile"
+                                  id="categoryAllMobile" value="All" checked>
+                                <label class="form-check-label" for="categoryAllMobile">All</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="productCategoryRadioMobile"
+                                  id="categoryFoodMobile" value="Food">
+                                <label class="form-check-label" for="categoryFoodMobile">Food</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="productCategoryRadioMobile"
+                                  id="categoryAccessoriesMobile" value="Accessories">
+                                <label class="form-check-label" for="categoryAccessoriesMobile">Accessories</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="productCategoryRadioMobile"
+                                  id="categoryTreatsMobile" value="Treats">
+                                <label class="form-check-label" for="categoryTreatsMobile">Treats</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand -->
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingThreeMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThreeMobile" aria-expanded="false"
+                          aria-controls="collapseThreeMobile">
+                          Brand
+                        </button>
+                      </h2>
+                      <div id="collapseThreeMobile" class="accordion-collapse collapse"
+                        aria-labelledby="headingThreeMobile" data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile" id="brandAllMobile"
+                                  value="All" checked>
+                                <label class="form-check-label" for="brandAllMobile">All</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandUltraMobile" value="ULTRA">
+                                <label class="form-check-label" for="brandUltraMobile">ULTRA</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandUltrMobile" value="ULTR">
+                                <label class="form-check-label" for="brandUltrMobile">ULTR</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandRodionMobile" value="Rodion">
+                                <label class="form-check-label" for="brandRodionMobile">Rodion</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandWhekraftMobile" value="Whekraft">
+                                <label class="form-check-label" for="brandWhekraftMobile">Whekraft</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandSuperFruitMobile" value="SUPER FRUIT">
+                                <label class="form-check-label" for="brandSuperFruitMobile">SUPER FRUIT</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandPetSafeMobile" value="PetSafe">
+                                <label class="form-check-label" for="brandPetSafeMobile">PetSafe</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="brandRadioMobile"
+                                  id="brandRoyalCaninMobile" value="Royal Canin">
+                                <label class="form-check-label" for="brandRoyalCaninMobile">Royal Canin</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Price Range -->
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingFourMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseFourMobile" aria-expanded="false" aria-controls="collapseFourMobile">
+                          Price Range
+                        </button>
+                      </h2>
+                      <div id="collapseFourMobile" class="accordion-collapse collapse"
+                        aria-labelledby="headingFourMobile" data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <input type="range" class="form-range" min="0" max="10000" step="100" id="priceRangeMobile">
+                          <div class="d-flex justify-content-between">
+                            <span id="priceRangeMinMobile">₹0</span>
+                            <span id="priceRangeMaxMobile">₹10000+</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Age Suitability -->
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingFiveMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseFiveMobile" aria-expanded="false" aria-controls="collapseFiveMobile">
+                          Age Suitability
+                        </button>
+                      </h2>
+                      <div id="collapseFiveMobile" class="accordion-collapse collapse"
+                        aria-labelledby="headingFiveMobile" data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="ageSuitabilityRadioMobile"
+                                  id="ageAllMobile" value="All" checked>
+                                <label class="form-check-label" for="ageAllMobile">All</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="ageSuitabilityRadioMobile"
+                                  id="agePuppyKittenMobile" value="Puppy/Kitten">
+                                <label class="form-check-label" for="agePuppyKittenMobile">Puppy/Kitten</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="ageSuitabilityRadioMobile"
+                                  id="ageAdultMobile" value="Adult">
+                                <label class="form-check-label" for="ageAdultMobile">Adult</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="ageSuitabilityRadioMobile"
+                                  id="ageSeniorMobile" value="Senior">
+                                <label class="form-check-label" for="ageSeniorMobile">Senior</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Availability -->
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingSixMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseSixMobile" aria-expanded="false" aria-controls="collapseSixMobile">
+                          Availability
+                        </button>
+                      </h2>
+                      <div id="collapseSixMobile" class="accordion-collapse collapse" aria-labelledby="headingSixMobile"
+                        data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <div class="form-check ">
+                            <input class="form-check-input" type="checkbox" value="" id="inStockCheckMobile">
+                            <label class="form-check-label" for="inStockCheckMobile">
+                              In Stock
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Offers & Discounts -->
+                    <div class="accordion-item border-0">
+                      <h2 class="accordion-header" id="headingSevenMobile">
+                        <button class="accordion-button no-focus" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseSevenMobile" aria-expanded="false"
+                          aria-controls="collapseSevenMobile">
+                          Offers & Discounts
+                        </button>
+                      </h2>
+                      <div id="collapseSevenMobile" class="accordion-collapse collapse border-0"
+                        aria-labelledby="headingSevenMobile" data-bs-parent="#accordionExampleMobile">
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="offersDiscountsRadioMobile"
+                                  id="offersAllMobile" value="All" checked>
+                                <label class="form-check-label" for="offersAllMobile">All</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="offersDiscountsRadioMobile"
+                                  id="offersOnSaleMobile" value="On Sale">
+                                <label class="form-check-label" for="offersOnSaleMobile">On Sale</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="offersDiscountsRadioMobile"
+                                  id="offersClearanceMobile" value="Clearance">
+                                <label class="form-check-label" for="offersClearanceMobile">Clearance</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="offersDiscountsRadioMobile"
+                                  id="offersNewCustomerMobile" value="New Customer Offer">
+                                <label class="form-check-label" for="offersNewCustomerMobile">New Customer Offer</label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--product display-->
+        <div class="col-lg-9 pro-listing col-md-8">
+          <div class="d-flex justify-content-between align-items-center mb-4" id="productListingContainer">
+            <p>You've viewed 9 of 20 products</p>
+            <div>
+              <select class="form-select d-inline-block w-auto mb-4 no-focus" id="sortOrder">
+                <option selected>Featured</option>
+                <option>New Arrival</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-2 g-md-2 g-lg-3" id="productCards">
+            <!-- Product cards will be rendered here by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Footer-->
+  <div class="container-fluid footer-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 footSec ft-padding">
+          <h3>Subscribe to our newsletter</h3>
+          <p>Register to receive newsletters to be updated about the latest activities of the store..</p>
+          <form class="d-flex">
+            <div class="input-group">
+              <input type="text" class="form-control border-0 no-focus" placeholder="Enter Your Email">
+              <span class="input-group-btn">
+                <button class="btn btn-lg no-focus" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </form>
+          <div class="paymentModes">
+            <div class="ft-heading">
+              <p>Payment Options</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card4.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card3.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card2.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card1.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 footSec">
+          <h3>
+            Information
+          </h3>
+          <p>
+            Contact our customer happiness team? <span>Monday-Friday 9am-5pm</span>
+          </p>
+          <a href="tel:+16133330101" class="tel text-decoration-none">(+1)-613-333-0101</a>
+          <div class="social-media">
+            <div class="ft-heading">
+              <p>Follow us</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/instagram (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/linkedin (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/facebook (2).png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footSec">
+          <h3>
+            Customer Service
+          </h3>
+          <ul class="list-group ">
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="tracking-form.html" class="text-decoration-none text-white">Track Order</a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Returns
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                My Account
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none  text-white">
+                FAQ
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 copywrite text-center">
+          <hr>
+          <p>© 2025 – <a href="#">Taillora.</a> All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center">
+          <span id="toast-message">Item added to cart!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <!-- End Toast notification -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Bootstrap js links-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!--Custom js-->
+  <script src="js/custom.js"></script>
+  <script src="js/sliders.js"></script>
+
+</body>
+
+</html>

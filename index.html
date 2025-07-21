@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailora-pet essential shop</title>
+  <!--Bootstrap css link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <!--slick slider-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <!--google icon-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <!--Custome css-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+  <!--offer tag-->
+  <div class="offer-tag">
+    <div class="container">
+      <ul class="list-group list-group-horizontal d-flex justify-content-center">
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Free Shipping Over $49
+        </li>
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Join Taillora Rewards Today!
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Navigation-->
+  <div class="menu-bar sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-white sticky-top">
+        <a class="navbar-brand" href="index.html">
+          <img src="./Images/logo.png" alt="">
+        </a>
+
+        <!-- Icons for Small Devices -->
+        <div class="d-flex d-lg-none align-items-center ms-auto">
+          <a href="#" class="px-2" id="searchToggle">
+          <img src="Images/Search.svg" alt="">
+        </a>    
+          <a href="cart.html" class="position-relative px-2">
+            <img src="Images/Shopping cart.svg" alt="">
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+          <a href="login.html" class="px-2">
+            <img src="Images/User.svg" alt="">
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="offer.html">Offer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="learn.html">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+          </ul>
+
+          <!-- Icons for Large Devices -->
+          <div class="searh-icon d-none d-lg-flex justify-content-between align-items-center pe-2">
+            <form class="position-relative icons" role="search">
+              <input type="text" class="form-control border-0 rounded-0 border-bottom" placeholder="Search...">
+              <span class="position-absolute top-50 end-0 translate-middle-y text-muted" style="pointer-events: none;">
+                <img src="Images/Search.svg" alt="">
+              </span>
+            </form>
+            <div class="wishlist icons position-relative">
+              <a href="wishlist.html">
+                <img src="./Images/Heart.svg" alt="">
+                <span
+                  class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </a>
+            </div>
+            <div class="cart icons position-relative">
+              <a href="cart.html">
+                <img src="./Images/Shopping cart.svg" alt="">
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </a>
+            </div>
+            <div class="login icons">
+              <a href="login.html">
+                <img src="./Images/User.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hidden Search Bar for Small Devices -->
+      <div id="mobileSearchBar" class="d-lg-none p-2" style="display:none;">
+  <form class="position-relative icons" role="search" onsubmit="return false;">
+    <input type="text" class="form-control border-0 rounded-0 border-bottom" id="searchInput" placeholder="Search...">
+    <button type="button" id="searchButton" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y" style="background: none; border: none; padding: 0;">
+      <img src="Images/Search.svg" alt="">
+    </button>
+  </form>
+</div>
+
+    </div>
+  </div>
+  <!--Hero banner section-->
+  <!--Banner slider-->
+  <div id="heroSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <!-- Pagination Dots -->
+
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="background-image: url('Images/slider1.jpg');">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="slidertxt col-lg-5 col-md-6 col-sm-12 ">
+              <h5>Purr-fect Meals for Your Feline Friend</h5>
+              <h2>Get 15% off on your first cat food order</h2>
+              <a href="shop.html" class="shopNow text-decoration-none">Shop Now</a>
+            </div>
+            <div class="sliderImg col-lg-7 col-md-6 col-sm-12 ">
+              <img src="Images/banner-slider image1.png" alt="" class="img-fluid destop-slider-img">
+              <img src="Images/banner-slider-image1-mbl.png" alt="" class="img-fluid mbl-slider-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="background-image: url('Images/banner2.jpg');">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="slidertxt col-lg-5 col-md-6 col-sm-12 ">
+              <h5>Give Your Pets the Best Every Day</h5>
+              <h2>Up to 30% Off on Pet Food Today</h2>
+              <a href="shop.html" class="shopNow text-decoration-none">Shop Now</a>
+            </div>
+            <div class="sliderImg col-lg-7 col-md-6 col-sm-12 ">
+              <img src="Images/banner-slider-item2.png" alt="" class="img-fluid destop-slider-img">
+              <img src="Images/banner-slider-image2-mbl.png" alt="" class="img-fluid mbl-slider-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="background-image: url('Images/banner3.png');">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="slidertxt col-lg-5 col-md-6 col-sm-12">
+              <h5>Everything Your Furry Will Ever Need</h5>
+              <h2>Flat 25% Off on Toys and Beds</h2>
+              <a href="shop.html" class="shopNow text-decoration-none">Shop Now</a>
+            </div>
+            <div class="sliderImg col-lg-7 col-md-6 col-sm-12 ">
+              <img src="Images/banner-slider-image3.png" alt="" class="img-fluid destop-slider-img">
+              <img src="Images/banner-slider-image3-mbl.png" alt="" class="img-fluid mbl-slider-img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row dots position-relative">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"
+              aria-current="true"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No navigation arrows here -->
+
+  </div>
+  <!--Product category-->
+  <div class="container wrapper">
+    <div class="sectionHeading">
+      <h1>Top Categories</h1>
+    </div>
+    <div class="category-slider">
+      <div class="cat-card">
+        <a href="shop.html?petType=Dog" class="text-dark text-decoration-none ">
+          <img src="Images/dog.png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-2">Dog</p>
+        </a>
+      </div>
+      <div class="cat-card">
+        <a href="shop.html?petType=Cat" class="text-dark text-decoration-none ">
+          <img src="Images/cat.png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-2">Cat</p>
+        </a>
+      </div>
+      <div class="cat-card">
+        <a href="shop.html?petType=Fish" class="text-dark text-decoration-none ">
+          <img src="Images/fish.png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-2">Fish</p>
+        </a>
+      </div>
+      <div class="cat-card">
+        <a href="shop.html?petType=Bird" class="text-dark text-decoration-none ">
+          <img src="Images/bird (1).png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-3">Bird</p>
+        </a>
+      </div>
+      <div class="cat-card">
+        <a href="shop.html?petType=Rabbit" class="text-dark text-decoration-none ">
+          <img src="Images/rabbit.png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-2">Rabbit</p>
+        </a>
+      </div>
+      <div class="cat-card">
+        <a href="shop.html?petType=Horse" class="text-dark text-decoration-none ">
+          <img src="Images/horse.png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-2">Horse</p>
+        </a>
+      </div>
+      <div class="cat-card">
+        <a href="shop.html?petType=Reptile" class="text-dark text-decoration-none ">
+          <img src="Images/reptiles.png" alt="" class="img-fluid">
+          <p class="pro-name text-center py-2">Reptile</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--Top Rated by Pet Parents-->
+  <div class="container-fluid petParentChoice">
+    <div class="container">
+      <div id="actionMessage" class="my-3"></div>
+      <div class="row row-cols-6 justify-content-between align-items-center">
+        <div class="sectionHeading col-">
+          <h1>Top Rated by Pet Parents</h1>
+        </div>
+        <div>
+          <div class="text-end viewAllBtn col-">
+            <a href="shop.html" class="text-decoration-none">View All <span><img src="Images/Arrow 2.svg"
+                  alt=""></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="wrapperTop">
+        <div class="productSliderOne">
+          <div class="pro-card">
+            <div class="proImg">
+              <img src="Images/pro1.png" alt="WhiskerWood Hideaway" class="img-fluid">
+            </div>
+            <div class="proDetails">
+              <div class="reviewrating">
+                <div class="star-rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <p class="reviewCount">
+                  (20)
+                </p>
+              </div>
+              <h3 class="productName">WhiskerWood Hideaway – Premium Wooden Cat House</h3>
+              <div class="price d-flex">
+                <p class="mrp text-decoration-line-through">₹7099</p>
+                <p class="realPrice">₹2500</p>
+              </div>
+            </div>
+            <div class="action-btns position-absolute z-3 border-0">
+              <ul class="action-flex d-flex flex-column">
+                <li class="btn addToWishlist z-3 border-0 no-focus" title="Add to wishlist">
+                  <img src="Images/favorite-like.svg" alt="Add to wishlist">
+                </li>
+                <li class="btn product-details z-3 border-0 no-focus" data-product-id="1" data-bs-toggle="tooltip"
+                  data-bs-placement="left" title="Click for details" data-bs-custom-class="custom-tooltip">
+                  <img src="Images/pro-details.svg" alt="">
+                </li>
+                <li class="btn addToCart z-3 border-0 border-0 no-focus" data-bs-toggle="tooltip"
+                  data-bs-placement="left" data-bs-custom-class="custom-tooltip" title="Add to cart">
+                  <img src="Images/shopping-bag.svg" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro-card">
+            <div class="proImg">
+              <img src="Images/pro2.png" alt="" class="img-fluid">
+            </div>
+            <div class="proDetails">
+              <div class="reviewrating">
+                <div class="star-rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <p class="reviewCount">
+                  (20)
+                </p>
+              </div>
+              <h3 class="productName">
+                SmartBowl AutoFeeder – Automatic Pet Food Dispenser
+              </h3>
+              <div class="price d-flex">
+                <p class="mrp text-decoration-line-through">₹7099</p>
+                <p class="realPrice">₹3900</p>
+              </div>
+            </div>
+            <div class="action-btns position-absolute z-3 border-0">
+              <ul class="action-flex d-flex flex-column">
+                <li class="btn addToWishlist z-3 border-0 no-focus" title="Add to wishlist">
+                  <img src="Images/favorite-like.svg" alt="Add to wishlist">
+                </li>
+                <li class="btn product-details z-3 border-0 no-focus" data-product-id="2" data-bs-toggle="tooltip"
+                  data-bs-placement="left" title="Click for details" data-bs-custom-class="custom-tooltip">
+                  <img src="Images/pro-details.svg" alt="">
+                </li>
+                <li class="btn addToCart z-3 border-0 border-0 no-focus" data-bs-toggle="tooltip"
+                  data-bs-placement="left" data-bs-custom-class="custom-tooltip" title="Add to cart">
+                  <img src="Images/shopping-bag.svg" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro-card">
+            <div class="proImg">
+              <img src="Images/pro3.png" alt="" class="img-fluid">
+            </div>
+            <div class="proDetails">
+              <div class="reviewrating">
+                <div class="star-rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <p class="reviewCount">
+                  (20)
+                </p>
+              </div>
+              <h3 class="productName">
+                Natural Balance-Broth Coated Kibble (pack of 2)
+              </h3>
+              <div class="price">
+                <p class="mrp text-decoration-line-through">₹1099</p>
+                <p class="realPrice">₹900</p>
+              </div>
+            </div>
+            <div class="action-btns position-absolute z-3 border-0">
+              <ul class="action-flex d-flex flex-column">
+                <li class="btn addToWishlist z-3 border-0 no-focus" title="Add to wishlist">
+                  <img src="Images/favorite-like.svg" alt="Add to wishlist">
+                </li>
+                <li class="btn product-details z-3 border-0 no-focus" data-product-id="3" data-bs-toggle="tooltip"
+                  data-bs-placement="left" title="Click for details" data-bs-custom-class="custom-tooltip">
+                  <img src="Images/pro-details.svg" alt="">
+                </li>
+                <li class="btn addToCart z-3 border-0 border-0 no-focus" data-bs-toggle="tooltip"
+                  data-bs-placement="left" data-bs-custom-class="custom-tooltip" title="Add to cart">
+                  <img src="Images/shopping-bag.svg" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro-card">
+            <div class="proImg">
+              <img src="Images/pro4.png" alt="" class="img-fluid">
+            </div>
+            <div class="proDetails">
+              <div class="reviewrating">
+                <div class="star-rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <p class="reviewCount">
+                  (20)
+                </p>
+              </div>
+              <h3 class="productName">
+                Vita Seeds-Natural Blend with added vitamins
+              </h3>
+              <div class="price">
+                <p class="mrp text-decoration-line-through">₹599</p>
+                <p class="realPrice">₹300</p>
+              </div>
+            </div>
+            <div class="action-btns position-absolute z-3 border-0">
+              <ul class="action-flex d-flex flex-column">
+                <li class="btn addToWishlist z-3 border-0 no-focus" title="Add to wishlist">
+                  <img src="Images/favorite-like.svg" alt="Add to wishlist">
+                </li>
+                <li class="btn product-details z-3 border-0 no-focus" data-product-id="4" data-bs-toggle="tooltip"
+                  data-bs-placement="left" title="Click for details" data-bs-custom-class="custom-tooltip">
+                  <img src="Images/pro-details.svg" alt="">
+                </li>
+                <li class="btn addToCart z-3 border-0 border-0 no-focus" data-bs-toggle="tooltip"
+                  data-bs-placement="left" data-bs-custom-class="custom-tooltip" title="Add to cart">
+                  <img src="Images/shopping-bag.svg" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro-card">
+            <div class="proImg">
+              <img src="Images/pro-18_360x-Photoroom (2).png" alt="" class="img-fluid">
+            </div>
+            <div class="proDetails">
+              <div class="reviewrating">
+                <div class="star-rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <p class="reviewCount">
+                  (20)
+                </p>
+              </div>
+              <h3 class="productName">
+                WhiskerWood Hideaway – Premium Wooden Cat House
+              </h3>
+              <div class="price">
+                <p class="mrp text-decoration-line-through">₹7099</p>
+                <p class="realPrice">₹2500</p>
+              </div>
+            </div>
+            <div class="action-btns position-absolute z-3 border-0">
+              <ul class="action-flex d-flex flex-column">
+                <li class="btn addToWishlist z-3 border-0 no-focus" title="Add to wishlist">
+                  <img src="Images/favorite-like.svg" alt="Add to wishlist">
+                </li>
+                <li class="btn product-details z-3 border-0 no-focus" data-product-id="5" data-bs-toggle="tooltip"
+                  data-bs-placement="left" title="Click for details" data-bs-custom-class="custom-tooltip">
+                  <img src="Images/pro-details.svg" alt="">
+                </li>
+                <li class="btn addToCart z-3 border-0 border-0 no-focus" data-bs-toggle="tooltip"
+                  data-bs-placement="left" data-bs-custom-class="custom-tooltip" title="Add to cart">
+                  <img src="Images/shopping-bag.svg" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Toast notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+    <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center">
+          <span id="toast-message">Item added to cart!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid offerSec">
+    <div class="container">
+      <div class="row ">
+        <div class="col-xl-6 col-sm-12">
+          <div class="offerOne offers d-flex justify-content-between align-items-center"
+            style="background-image: url('Images/offerOne.png');">
+            <div class="offer-img">
+              <img src="Images/cat_offer.png" alt="">
+            </div>
+            <div class="offertext">
+              <h3>
+                Flat 25% Off
+              </h3>
+              <h2>Purr-fection in every bite.</h2>
+              <p>
+                Your feline’s favorite meaty meals and treats — now at a delicious discount.
+              </p>
+              <a href="#" class="shopNow text-decoration-none">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-sm-12">
+          <div class="offerTwo offers d-flex justify-content-between align-items-center"
+            style="background-image: url('Images/offerOnDog.png');">
+            <div class="offertext">
+              <h3>
+                Up to 30% Off
+              </h3>
+              <h2>Edgard Cooper!
+                happy tails guaranteed!</h2>
+              <p>
+                Balanced kibbles, crunchy biscuits, and savory wet meals designed for every life stage.
+              </p>
+              <a href="#" class="shopNow text-decoration-none">Shop Now</a>
+            </div>
+            <div class="offer-img">
+              <img src="Images/dog_offer.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="offerThree">
+            <div class="offer-txt-one d-flex justify-content-evenly align-items-center flex-sm-wrap">
+              <h3>
+                Get 10% OFF when you spend $100+ in gift
+                cards online with: <span>PETDAD25</span> thru 6/15*
+              </h3>
+              <img src="Images/Frame 47 (1).png" alt="" class="img-fluid changePosition d-md-block d-none">
+              <a href="#" class="shopNow text-decoration-none shopNow-white">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid offersTab">
+    <div class="container">
+      <div class="sectionHeadingNew text-center">
+        <h1>Today’s Tail-Wagging Offers</h1>
+      </div>
+      <ul class="nav nav-tabs justify-content-center border-0 product-best" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="latest-tab" data-bs-toggle="tab" data-bs-target="#latest" type="button"
+            role="tab">Latest Products</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="top-tab" data-bs-toggle="tab" data-bs-target="#top" type="button" role="tab">Top
+            Rating</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="best-tab" data-bs-toggle="tab" data-bs-target="#best" type="button"
+            role="tab">Best Sellers</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="featured-tab" data-bs-toggle="tab" data-bs-target="#featured" type="button"
+            role="tab">Featured Products</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="shop.html" class="nav-link"> All Items</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <!-- Latest Products -->
+        <div class="tab-pane fade show active" id="latest" role="tabpanel">
+          <div class="product-display row">
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro1.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li class="btn product-details z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro2.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro3.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro4.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Rating -->
+        <div class="tab-pane fade" id="top" role="tabpanel">
+          <div class="product-display row">
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro1.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro4.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best Sellers -->
+        <div class="tab-pane fade" id="best" role="tabpanel">
+          <div class="product-display row">
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro-6.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro-8.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro-7.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro1.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+              <div class="action-btns position-absolute z-3">
+                <ul class="action-flex d-flex flex-column">
+                  <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                    <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+                  </li>
+                  <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Click for details" data-bs-custom-class="custom-tooltip">
+                    <img src="Images/action-showDetails.svg" alt="">
+                  </li>
+                  <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-custom-class="custom-tooltip" title="Add to cart">
+                    <img src="Images/action-addtocart.svg" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured -->
+        <div class="tab-pane fade" id="featured" role="tabpanel">
+          <div class="product-display row">
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro-9.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro3.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+            </div>
+            <div class="pro-card col-lg-3 col-md-4 col-6">
+              <div class="proImg">
+                <img src="Images/pro-6.png" alt="" class="img-fluid">
+              </div>
+              <div class="proDetails">
+                <div class="reviewrating">
+                  <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                  <p class="reviewCount">
+                    (20)
+                  </p>
+                </div>
+                <h3 class="productName">
+                  WhiskerWood Hideaway – Premium Wooden Cat House
+                </h3>
+                <div class="price d-flex">
+                  <p class="mrp text-decoration-line-through">₹7099</p>
+                  <p class="realPrice">₹2500</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-btns position-absolute z-3">
+            <ul class="action-flex d-flex flex-column">
+              <li class="btn addToWishlist z-3 no-focus" title="Add to wishlist">
+                <img src="Images/action-wishlist.svg" alt="Add to wishlist">
+              </li>
+              <li id="product-details" class="btn z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                title="Click for details" data-bs-custom-class="custom-tooltip">
+                <img src="Images/action-showDetails.svg" alt="">
+              </li>
+              <li class="btn addToCart z-3 no-focus" data-bs-toggle="tooltip" data-bs-placement="left"
+                data-bs-custom-class="custom-tooltip" title="Add to cart">
+                <img src="Images/action-addtocart.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Testimonials-->
+  <div class="container-fluid testimonials">
+    <div class="container testi-wrapper">
+      <div class="sectionHeading">
+        <h1>Customer Reviews</h1>
+      </div>
+      <div class="testimonial-sliders">
+        <div class="test-details d-flex justify-content-between align-items-center">
+          <div class="test-reviewer center-horizontal">
+            <img src="Images/image (2).png" alt="" class="img-fluid">
+          </div>
+          <div class="reviews">
+            <div class="star-rating-svg">
+              <img src="Images/stars.svg" alt="">
+            </div>
+            <p>“I ordered the plush donut bed for my golden retriever, and he’s obsessed! It’s the comfiest thing he’s
+              ever slept on.”</p>
+            <p class="rv-name">
+              Jessica R., Seattle, WA
+            </p>
+          </div>
+        </div>
+        <div class="test-details d-flex justify-content-center align-items-center">
+          <div class="test-reviewer center-horizontal">
+            <img src="Images/image (3).png" alt="" class="img-fluid">
+          </div>
+          <div class="reviews">
+            <div class="star-rating-svg">
+              <img src="Images/stars.svg" alt="">
+            </div>
+            <p>“I ordered the plush donut bed for my golden retriever, and he’s obsessed! It’s the comfiest thing he’s
+              ever slept on.”</p>
+            <p class="rv-name">
+              Jessica R., Seattle, WA
+            </p>
+          </div>
+        </div>
+        <div class="test-details d-flex justify-content-center align-items-center">
+          <div class="test-reviewer center-horizontal">
+            <img src="Images/image (2).png" alt="" class="img-fluid">
+          </div>
+          <div class="reviews">
+            <div class="star-rating-svg">
+              <img src="Images/stars.svg" alt="">
+            </div>
+            <p>“I ordered the plush donut bed for my golden retriever, and he’s obsessed! It’s the comfiest thing he’s
+              ever slept on.”</p>
+            <p class="rv-name">
+              Jessica R., Seattle, WA
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--brands-->
+  <div class="contaiiner-fluid brands">
+    <div class="container">
+      <div class="brand-heading text-center">
+        <h3>
+          Trusted By The World’s Best
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-4 my-lg-0 my-3 text-center">
+          <img src="Images/h2_brand_img02.svg" alt="">
+        </div>
+        <div class="col-lg-2 col-4 my-lg-0 my-3 text-center">
+          <img src="Images/h2_brand_img01.svg" alt="">
+        </div>
+        <div class="col-lg-2 col-4 my-lg-0 my-3 text-center">
+          <img src="Images/h2_brand_img07.svg" alt="">
+        </div>
+        <div class="col-lg-2 col-4 my-lg-0 my-3 text-center">
+          <img src="Images/h2_brand_img06.svg" alt="">
+        </div>
+        <div class="col-lg-2 col-4 my-lg-0 my-3 text-center">
+          <img src="Images/h2_brand_img04.svg" alt="">
+        </div>
+        <div class="col-lg-2 col-4 my-lg-0 my-3 text-center">
+          <img src="Images/h2_brand_img05.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Instagram Feed-->
+  <div class="container-fluid insta-feed">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between align-items-center heading-sec">
+          <h3>Our Instagram Feed</h3>
+          <div class="follow d-flex justify-content-between align-items-start">
+            <p class="px-3">Follow us</p>
+            <a href="#"><img src="Images/instagram 1.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3">
+          <a href="Images/gallery_4 (1) 1 (1).png" class="glightbox">
+            <img src="Images/gallery_4 (1) 1 (1).png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3">
+          <a href="Images/gallery_5 (1).png" class="glightbox">
+            <img src="Images/gallery_5 (1).png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3">
+          <a href="Images/gallery_6 (1) (1).png" class="glightbox">
+            <img src="Images/gallery_6 (1) (1).png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3 gallery-img">
+          <a href="Images/gallery_1 (1) (1).png" class="glightbox">
+            <img src="Images/gallery_1 (1) (1).png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3 gallery-img">
+          <a href="Images/gallery_8 (1).png" class="glightbox">
+            <img src="Images/gallery_8 (1).png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3 gallery-img">
+          <a href="Images/gallery_9.png" class="glightbox">
+            <img src="Images/gallery_9.png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3 gallery-img">
+          <a href="Images/gallery_2 (1).png" class="glightbox">
+            <img src="Images/gallery_2 (1).png" alt="">
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 py-3 gallery-img">
+          <a href="Images/gallery_7 (1).png" class="glightbox">
+            <img src="Images/gallery_7 (1).png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <div class="container-fluid footer-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 footSec ft-padding">
+          <h3>Subscribe to our newsletter</h3>
+          <p>Register to receive newsletters to be updated about the latest activities of the store..</p>
+          <form class="d-flex">
+            <div class="input-group">
+              <input type="text" class="form-control border-0 no-focus" placeholder="Enter Your Email">
+              <span class="input-group-btn">
+                <button class="btn btn-lg no-focus" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </form>
+          <div class="paymentModes">
+            <div class="ft-heading">
+              <p>Payment Options</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card4.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card3.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card2.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card1.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 footSec">
+          <h3>
+            Information
+          </h3>
+          <p>
+            Contact our customer happiness team? <span>Monday-Friday 9am-5pm</span>
+          </p>
+          <a href="tel:+16133330101" class="tel text-decoration-none">(+1)-613-333-0101</a>
+          <div class="social-media">
+            <div class="ft-heading">
+              <p>Follow us</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/instagram (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/linkedin (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/facebook (2).png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footSec">
+          <h3>
+            Customer Service
+          </h3>
+          <ul class="list-group ">
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="tracking-form.html" class="text-decoration-none text-white">Track Order</a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Returns
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                My Account
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none  text-white">
+                FAQ
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 copywrite text-center">
+          <hr>
+          <p>© 2025 – <a href="#">Taillora.</a> All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Bootstrap js links-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!--Custom js-->
+  <script src="js/custom.js"></script>
+  <script src="js/sliders.js"></script>
+
+</body>

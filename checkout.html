@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailora-pet essential shop</title>
+    <!--Bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <!--slick slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <!--google icon-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <!--Custome css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+    <!--offer tag-->
+    <div class="offer-tag">
+        <div class="container">
+            <ul class="list-group list-group-horizontal d-flex justify-content-center">
+                <li class="list-group-item bg-transparent border-0 text-white text-center">
+                    Free Shipping Over $49
+                </li>
+                <li class="list-group-item bg-transparent border-0 text-white text-center">
+                    Join Taillora Rewards Today!
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Navigation-->
+    <div class="menu-bar sticky-top bg-white">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-white sticky-top">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Images/logo.png" alt="">
+                </a>
+
+                <!-- Icons for Small Devices -->
+                <div class="d-flex d-lg-none align-items-center ms-auto">
+                    <a href="#" class="px-2" id="searchToggle">
+                        <img src="Images/Search.svg" alt="">
+                    </a>
+                    <a href="cart.html" class="position-relative px-2">
+                        <img src="Images/Shopping cart.svg" alt="">
+                        <span
+                            class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+                    <a href="login.html" class="px-2">
+                        <img src="Images/User.svg" alt="">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="offer.html">Offer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="learn.html">Learn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="support.html">Support</a>
+                        </li>
+                    </ul>
+
+                    <!-- Icons for Large Devices -->
+                    <div class="searh-icon d-none d-lg-flex justify-content-between align-items-center pe-2">
+                        <form class="position-relative icons" role="search">
+                            <input type="text" class="form-control border-0 rounded-0 border-bottom"
+                                placeholder="Search...">
+                            <span class="position-absolute top-50 end-0 translate-middle-y text-muted"
+                                style="pointer-events: none;">
+                                <img src="Images/Search.svg" alt="">
+                            </span>
+                        </form>
+                        <div class="wishlist icons position-relative">
+                            <a href="wishlist.html">
+                                <img src="./Images/Heart.svg" alt="">
+                                <span
+                                    class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                            </a>
+                        </div>
+                        <div class="cart icons position-relative">
+                            <a href="cart.html">
+                                <img src="./Images/Shopping cart.svg" alt="">
+                                <span
+                                    class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                </span>
+                            </a>
+                        </div>
+                        <div class="login icons">
+                            <a href="login.html">
+                                <img src="./Images/User.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Hidden Search Bar for Small Devices -->
+            <div id="mobileSearchBar" class="d-lg-none p-2" style="display:none;">
+                <form class="position-relative icons" role="search">
+                    <input type="text" class="form-control border-0 rounded-0 border-bottom" placeholder="Search...">
+                    <span class="position-absolute top-50 end-0 translate-middle-y text-muted"
+                        style="pointer-events: none;">
+                        <img src="Images/Search.svg" alt="">
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--inner banner sec-->
+    <div class="inner-banner container-fluid">
+        <div class="container">
+            <div class="inner-banner-heading text-center">
+                <h2>Checkout</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex justify-content-center">
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--Checkout section-->
+    <div class="container-fluid checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-8 col-12 checkoutAddress">
+                    <div class="login-contact d-flex justify-content-between align-items-center">
+                        <h3>Contact</h3>
+                        <a href="login.html" class="text-decoration-none">Login</a>
+                    </div>
+                    <div class="input-group newsletters">
+                        <input type="text" class="form-control no-focus"
+                            placeholder="Enter Your Username/ email address" required>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input no-focus" id="newsletterSubscription">
+                            <label class="form-check-label" for="rememberMe">Email me with news and offers</label>
+                        </div>
+                    </div>
+                    <div class="billing-details">
+                        <h3>Billing Details</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label class="form-label ">Country*</label>
+                                <select class="form-select no-focus" id="countrySelect" required>
+                                    <option value="">Select Country</option>
+                                    <option value="India">India</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Canada">Canada</option>
+                                </select>
+                            </div>
+                            <div class="name mb-4 d-flex justify-content-between align-items-center">
+                                <div class="f-name">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control no-focus">
+                                </div>
+                                <div class="l-name">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control no-focus">
+                                </div>
+                            </div>
+                            <div class="Address mb-4">
+                                <label class="form-label">Address*</label>
+                                <input type="text" class="form-control no-focus mb-3" placeholder="Street Address">
+                                <input type="text" class="form-control no-focus"
+                                    placeholder="Apartment, flat no, suite, unit....">
+                            </div>
+                            <div class="town-postal mb-4 d-flex justify-content-between align-items-center">
+                                <div class="town">
+                                    <label class="form-label">Town / City *</label>
+                                    <input type="text" class="form-control no-focus mb-3" placeholder="Town/city">
+                                </div>
+                                <div class="postal">
+                                    <label class="form-label">Postal Code *</label>
+                                    <input type="text" class="form-control no-focus" placeholder="Postal Code *">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center mb-4">
+                                <div class="form-check me-5">
+                                    <input type="checkbox" class="form-check-input no-focus" id="CreateAnAccount">
+                                    <label class="form-check-label" for="CreateAccount">Create an account?</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input no-focus" id="Shiptodifferent">
+                                    <label class="form-check-label" for="differentAddress">Ship to different
+                                        address</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Order Note</label>
+                                <textarea class="form-control" id="message" rows="10"
+                                    placeholder="Notes for your order, e.g special delivery instruction"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-4 col-12 checkoutCalculation">
+                    <div class="order-summary">
+                        <div class="d-flex justify-content-between p-3">
+                            <h4>Oder Summery</h4>
+                            <div class="d-flex justify-content-center align-items-center cart-nm">
+                                <span class="cart-count">0</span>
+                                <p>&nbsp items</p>
+                            </div>
+                        </div>
+                        <div id="orderSummary" class="rounded"></div>
+                    </div>
+                    <div class="payment-gateway p-3 mt-4 mb-4">
+                        <h4 class="mt-2 mb-3">Payment Method</h4>
+                        <form id="paymentForm">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input me-3" type="radio" name="paymentMethod" id="card"
+                                    value="Card" required>
+                                <label class="form-check-label" for="card">Credit / Debit Card</label>
+                            </div>
+                            <div id="cardDetails" class="mt-3" style="display: none;">
+                                <div class="mb-2">
+                                    <input type="text" class="form-control p-3 rounded-2" id="cardNumber"
+                                        placeholder="Card Number*" maxlength="19" required>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="me-3" style="width: 60%;">
+                                        <input type="text" class="form-control p-3 rounded-2" id="expiry" maxlength="5"
+                                            placeholder="Expire date: MM/YY" required>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control p-3 rounded-2" id="cvv" placeholder="123"
+                                            maxlength="3" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input me-3" type="radio" name="paymentMethod" id="upi"
+                                    value="UPI">
+                                <label class="form-check-label" for="upi">UPI / Google Pay / PhonePe</label>
+                            </div>
+                            <div id="upiDetails" class="payment-details" style="display:none;">
+                                <input type="text" placeholder="UPI ID" class="form-control mb-2">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input me-3" type="radio" name="paymentMethod" id="netbanking"
+                                    value="NetBanking">
+                                <label class="form-check-label" for="netbanking">Net Banking</label>
+                            </div>
+                            <div id="netbankingDetails" class="mt-3 p-3 border rounded bg-light" style="display: none;">
+                                <h5>Select Bank</h5>
+                                <select class="form-select">
+                                    <option>Choose your bank</option>
+                                    <option>Bank A</option>
+                                    <option>Bank B</option>
+                                </select>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input me-3" type="radio" name="paymentMethod" id="cod"
+                                    value="COD">
+                                <label class="form-check-label" for="cod">Cash on Delivery (₹50 COD Fee)</label>
+                            </div>
+                            <div id="codDetails" class="mt-3 p-3 border rounded bg-light" style="display: none;">
+                                <p>No additional info required for COD.</p>
+                            </div>
+                        </form>
+                    </div>
+                    <button class="btn btn-primary w-100" id="placeOrderBtn">Place Your Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid footer-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 footSec ft-padding">
+                    <h3>Subscribe to our newsletter</h3>
+                    <p>Register to receive newsletters to be updated about the latest activities of the store..</p>
+                    <form class="d-flex">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-0 no-focus" placeholder="Enter Your Email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-lg no-focus" type="submit">Subscribe</button>
+                            </span>
+                        </div>
+                    </form>
+                    <div class="paymentModes">
+                        <div class="ft-heading">
+                            <p>Payment Options</p>
+                        </div>
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href=""><img src="Images/card4.png" alt=""></a>
+                            </li>
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href=""><img src="Images/card3.png" alt=""></a>
+                            </li>
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href=""><img src="Images/card2.png" alt=""></a>
+                            </li>
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href=""><img src="Images/card1.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 footSec">
+                    <h3>
+                        Information
+                    </h3>
+                    <p>
+                        Contact our customer happiness team? <span>Monday-Friday 9am-5pm</span>
+                    </p>
+                    <a href="tel:+16133330101" class="tel text-decoration-none">(+1)-613-333-0101</a>
+                    <div class="social-media">
+                        <div class="ft-heading">
+                            <p>Follow us</p>
+                        </div>
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href="#"><img src="Images/instagram (2).png" alt=""></a>
+                            </li>
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href="#"><img src="Images/linkedin (2).png" alt=""></a>
+                            </li>
+                            <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                                <a href="#"><img src="Images/facebook (2).png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footSec">
+                    <h3>
+                        Customer Service
+                    </h3>
+                    <ul class="list-group ">
+                        <li class="list-group-item border-0 bg-transparent p-0">
+                            <a href="tracking-form.html" class="text-decoration-none text-white">Track Order</a>
+                        </li>
+                        <li class="list-group-item border-0 bg-transparent p-0">
+                            <a href="#" class="text-decoration-none text-white">
+                                Returns
+                            </a>
+                        </li>
+                        <li class="list-group-item border-0 bg-transparent p-0">
+                            <a href="#" class="text-decoration-none text-white">
+                                My Account
+                            </a>
+                        </li>
+                        <li class="list-group-item border-0 bg-transparent p-0">
+                            <a href="#" class="text-decoration-none  text-white">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="list-group-item border-0 bg-transparent p-0">
+                            <a href="#" class="text-decoration-none text-white">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 copywrite text-center">
+                    <hr>
+                    <p>© 2025 – <a href="#">Taillora.</a> All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--Bootstrap js links-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <!--Custom js-->
+    <script src="./js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

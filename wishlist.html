@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailora-pet essential shop</title>
+  <!--Bootstrap css link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <!--slick slider-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <!--google icon-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <!--Custome css-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+  <!--offer tag-->
+  <div class="offer-tag">
+    <div class="container">
+      <ul class="list-group list-group-horizontal d-flex justify-content-center">
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Free Shipping Over $49
+        </li>
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Join Taillora Rewards Today!
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Navigation-->
+  <div class="menu-bar sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-white sticky-top">
+        <a class="navbar-brand" href="index.html">
+          <img src="./Images/logo.png" alt="">
+        </a>
+
+        <!-- Icons for Small Devices -->
+        <div class="d-flex d-lg-none align-items-center ms-auto">
+          <a href="#" class="px-2" id="searchToggle">
+          <img src="Images/Search.svg" alt="">
+        </a>    
+          <a href="cart.html" class="position-relative px-2">
+            <img src="Images/Shopping cart.svg" alt="">
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+          <a href="login.html" class="px-2">
+            <img src="Images/User.svg" alt="">
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="offer.html">Offer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="learn.html">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+          </ul>
+
+          <!-- Icons for Large Devices -->
+          <div class="searh-icon d-none d-lg-flex justify-content-between align-items-center pe-2">
+            <form class="position-relative icons" role="search">
+              <input type="text" class="form-control border-0 rounded-0 border-bottom" placeholder="Search...">
+              <span class="position-absolute top-50 end-0 translate-middle-y text-muted" style="pointer-events: none;">
+                <img src="Images/Search.svg" alt="">
+              </span>
+            </form>
+            <div class="wishlist icons position-relative">
+              <a href="wishlist.html">
+                <img src="./Images/Heart.svg" alt="">
+                <span
+                  class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </a>
+            </div>
+            <div class="cart icons position-relative">
+              <a href="cart.html">
+                <img src="./Images/Shopping cart.svg" alt="">
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </a>
+            </div>
+            <div class="login icons">
+              <a href="login.html">
+                <img src="./Images/User.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hidden Search Bar for Small Devices -->
+      <div id="mobileSearchBar" class="d-lg-none p-2" style="display:none;">
+  <form class="position-relative icons" role="search" onsubmit="return false;">
+    <input type="text" class="form-control border-0 rounded-0 border-bottom" id="searchInput" placeholder="Search...">
+    <button type="button" id="searchButton" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y" style="background: none; border: none; padding: 0;">
+      <img src="Images/Search.svg" alt="">
+    </button>
+  </form>
+</div>
+
+    </div>
+  </div>
+  <!--inner banner sec-->
+  <div class="inner-banner container-fluid">
+    <div class="container">
+      <div class="inner-banner-heading text-center">
+        <h2>Wishlist</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid wishlist-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div id="wishlistContainer" class="row row-cols-1 g-4">
+            <!-- Wishlist items will be rendered here by JS -->
+          </div>
+          <div id="emptyWishlistMsg" class="text-center text-muted" style="display:none;">
+            <img src="Images/empty-cart.png" alt="Empty Wishlist" style="width:100px;opacity:0.5;">
+            <h4 class="mt-3">Your wishlist is empty</h4>
+            <p>Add products to your wishlist to view them here.</p>
+            <a href="shop.html" class="btn btn-primary">Go to Shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <div class="container-fluid footer-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 footSec ft-padding">
+          <h3>Subscribe to our newsletter</h3>
+          <p>Register to receive newsletters to be updated about the latest activities of the store..</p>
+          <form class="d-flex">
+            <div class="input-group">
+              <input type="text" class="form-control border-0 no-focus" placeholder="Enter Your Email">
+              <span class="input-group-btn">
+                <button class="btn btn-lg no-focus" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </form>
+          <div class="paymentModes">
+            <div class="ft-heading">
+              <p>Payment Options</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card4.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card3.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card2.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card1.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 footSec">
+          <h3>
+            Information
+          </h3>
+          <p>
+            Contact our customer happiness team? <span>Monday-Friday 9am-5pm</span>
+          </p>
+          <a href="tel:+16133330101" class="tel text-decoration-none">(+1)-613-333-0101</a>
+          <div class="social-media">
+            <div class="ft-heading">
+              <p>Follow us</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/instagram (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/linkedin (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/facebook (2).png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footSec">
+          <h3>
+            Customer Service
+          </h3>
+          <ul class="list-group ">
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="tracking-form.html" class="text-decoration-none text-white">Track Order</a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Returns
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                My Account
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none  text-white">
+                FAQ
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 copywrite text-center">
+          <hr>
+          <p>© 2025 – <a href="#">Taillora.</a> All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center">
+          <span id="toast-message">Item added to cart!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <!-- End Toast notification -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Bootstrap js links-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!--Custom js-->
+  <script src="js/custom.js"></script>
+  <script src="js/sliders.js"></script>
+
+</body>
+
+</html>

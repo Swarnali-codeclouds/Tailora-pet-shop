@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailora-pet essential shop</title>
+  <!--Bootstrap css link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <!--slick slider-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <!--google icon-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <!--Custome css-->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+  <!--offer tag-->
+  <div class="offer-tag">
+    <div class="container">
+      <ul class="list-group list-group-horizontal d-flex justify-content-center">
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Free Shipping Over $49
+        </li>
+        <li class="list-group-item bg-transparent border-0 text-white text-center">
+          Join Taillora Rewards Today!
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Navigation-->
+  <div class="menu-bar sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-white sticky-top">
+        <a class="navbar-brand" href="index.html">
+          <img src="./Images/logo.png" alt="">
+        </a>
+
+        <!-- Icons for Small Devices -->
+        <div class="d-flex d-lg-none align-items-center ms-auto">
+          <a href="#" class="px-2" id="searchToggle">
+          <img src="Images/Search.svg" alt="">
+        </a>    
+          <a href="cart.html" class="position-relative px-2">
+            <img src="Images/Shopping cart.svg" alt="">
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+          <a href="login.html" class="px-2">
+            <img src="Images/User.svg" alt="">
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="offer.html">Offer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="learn.html">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+          </ul>
+
+          <!-- Icons for Large Devices -->
+          <div class="searh-icon d-none d-lg-flex justify-content-between align-items-center pe-2">
+            <form class="position-relative icons" role="search">
+              <input type="text" class="form-control border-0 rounded-0 border-bottom" placeholder="Search...">
+              <span class="position-absolute top-50 end-0 translate-middle-y text-muted" style="pointer-events: none;">
+                <img src="Images/Search.svg" alt="">
+              </span>
+            </form>
+            <div class="wishlist icons position-relative">
+              <a href="wishlist.html">
+                <img src="./Images/Heart.svg" alt="">
+                <span
+                  class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </a>
+            </div>
+            <div class="cart icons position-relative">
+              <a href="cart.html">
+                <img src="./Images/Shopping cart.svg" alt="">
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </a>
+            </div>
+            <div class="login icons">
+              <a href="login.html">
+                <img src="./Images/User.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hidden Search Bar for Small Devices -->
+      <div id="mobileSearchBar" class="d-lg-none p-2" style="display:none;">
+  <form class="position-relative icons" role="search" onsubmit="return false;">
+    <input type="text" class="form-control border-0 rounded-0 border-bottom" id="searchInput" placeholder="Search...">
+    <button type="button" id="searchButton" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y" style="background: none; border: none; padding: 0;">
+      <img src="Images/Search.svg" alt="">
+    </button>
+  </form>
+</div>
+
+    </div>
+  </div>
+  <!--inner banner sec-->
+  <div class="inner-banner container-fluid">
+    <div class="container">
+      <div class="inner-banner-heading text-center">
+        <h2>Blog Details</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blog details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!--blog details-->
+  <div class="container blg-dtls">
+    <div class="row">
+      <!--left panel-->
+      <div class="col-lg-8">
+        <div class="blog-details">
+          <img src="Images/blog-details.png" alt="">
+          <h3>5 Signs Your Dog is Trying to Tell You Something (and What to Do About It)</h3>
+          <div class="d-flex justify-content-start align-items-center blg-inf">
+            <p>By</p>
+            <ul class="d-flex justify-content-center align-items-center uploading-info">
+              <li class="list-group-item d-flex">Taillora Pet Experts</li>
+              <li class="list-group-item d-flex"><img src="Images/date.svg" alt="">June 5, 2025</li>
+              <li class="list-group-item d-flex"><img src="Images/time.svg" alt="">4 min read</li>
+            </ul>
+          </div>
+          <div class="blog-paragraph">
+            <p>Pets don’t speak our language — but they’re always talking. From tail wags to ear flicks, your dog’s
+              behavior tells a story. In this post, we decode common signals that often go unnoticed and what they might
+              mean for your pup’s well-being.</p>
+            <ul>
+              <li>
+                <h4>1. Excessive Licking</h4>
+                <p>A wagging tail is a classic sign of happiness, but did you know the direction and speed can reveal
+                  even more? A slow wag to the right often indicates contentment, while a fast wag to the left may
+                  signal excitement or anxiety.This can signal anxiety, boredom, or even a skin issue. Find out when to
+                  worry and what calming activities help.</p>
+              </li>
+              <li>
+                <h4>2. Tail Tucks or Trembling</h4>
+                <p>If your dog suddenly cowers or shakes, it could be fear or discomfort — we explain how to comfort
+                  them or spot signs of illness.</p>
+              </li>
+              <li>
+                <h4>3. Pacing or Circling</h4>
+                <p>Is your dog restless or walking in patterns? It might be mental stimulation they need — or a sign to
+                  visit the vet.</p>
+              </li>
+              <li>
+                <h4>4. Avoiding Eye Contact</h4>
+                <p>Dogs use eye contact to bond — or avoid conflict. Here's how to know the difference.</p>
+              </li>
+              <li>
+                <h4>5. Sleeping More Than Usual</h4>
+                <p>Changes in sleep patterns can signal age, stress, or hidden health issues. Here’s when to monitor and
+                  when to act.</p>
+              </li>
+            </ul>
+            <p class="auth-quote">
+              “Dogs love routine. Sudden behavior shifts often point to changes in their environment or health.”
+            </p>
+            <p class="author-name text-black">– Dr. Meera Banerjee, Taillora Veterinary Advisor</p>
+            <div class="blog-tag d-flex justify-content-start align-items-center gap-2">
+              <p class="text-black m-0">Tag</p>
+              <button class="btn btn-outline-dark">Dog Behavior</button>
+              <button class="btn btn-outline-dark">Dog Health</button>
+              <button class="btn btn-outline-dark">Canine Communication</button>
+              <button class="btn btn-outline-dark">Dog Training</button>
+            </div>
+          </div>
+          <div class="changer d-flex justify-content-between align-items-center">
+            <div class="blog-btns-prev">
+              <a href="#" class=" d-flex flex-nowrap align-items-center text-decoration-none text-black"><img
+                  src="Images/blog-prev.svg" alt="">
+                Previous lesson</a>
+            </div>
+            <div class="blog-btns-next">
+              <a href="#" class="d-flex flex-nowrap align-items-center text-decoration-none text-black">Next lesson <img
+                  src="Images/blog-next.svg" alt=""> </a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-comments">
+          <h3>02 Comments</h3>
+          <div class="comment-box">
+            <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+              <img src="Images/user-comment1.png" alt="">
+              <p class="m-0 rv-name">Maya S., Boston, MA</p>
+            </div>
+            <p>“Great article! I never realized my pup’s excessive licking was anxiety—thought it was just a cute quirk.
+              Tried the calming puzzle toy you suggested, and he’s already much more relaxed. Thanks for the tips!”</p>
+            <button class="btn mt-2 p-0">Reply</button>
+          </div>
+          <div class="comment-box">
+            <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+              <img src="Images/user-comment2.png" alt="">
+              <p class="m-0">Carlos R., Austin, TX</p>
+            </div>
+            <p>“My German Shepherd used to pace before storms, but I always dismissed it. After reading this, I set up a
+              cozy safe space with a Thundershirt, and it’s made such a difference. Can you recommend any other
+              storm-anxiety tools?”</p>
+            <button class="btn mt-2 p-0">Reply</button>
+          </div>
+          <form class="comment-form">
+            <h4>Post Comment</h4>
+            <form>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="mb-3" style="width: 48%;">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3" style="width:48%;">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="comment" class="form-label">Comment</label>
+                <textarea class="form-control" id="comment" rows="5" placeholder="Write your comment here"></textarea>
+              </div>
+            </form>
+            <button type="submit" class="btn shopNow">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!--right panel-->
+      <div class="col-lg-4 mt-lg-0 mt-4">
+        <div class="latest-topic">
+          <h3>Latest Topics</h3>
+          <ul class="list-group">
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">Understanding Your Dog's
+                Body
+                Language</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">Top 10 Signs Your Dog is
+                Happy</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">How to Train Your Dog
+                Effectively</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">The Importance of Regular
+                Vet
+                Checkups</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">Common Dog Behavior Problems
+                and Solutions</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">Feeding Your Dog: What You
+                Need to Know</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">Dog Grooming Tips for Every
+                Breed</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">How to Keep Your Dog Active
+                and Healthy</a></li>
+            <li class="list-group-item border-0"><a href="#" class="text-decoration-none">Understanding Dog
+                Nutrition</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="container-fluid footer-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 footSec ft-padding">
+          <h3>Subscribe to our newsletter</h3>
+          <p>Register to receive newsletters to be updated about the latest activities of the store..</p>
+          <form class="d-flex">
+            <div class="input-group">
+              <input type="text" class="form-control border-0 no-focus" placeholder="Enter Your Email">
+              <span class="input-group-btn">
+                <button class="btn btn-lg no-focus" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </form>
+          <div class="paymentModes">
+            <div class="ft-heading">
+              <p>Payment Options</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card4.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card3.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card2.png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href=""><img src="Images/card1.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 footSec">
+          <h3>
+            Information
+          </h3>
+          <p>
+            Contact our customer happiness team? <span>Monday-Friday 9am-5pm</span>
+          </p>
+          <a href="tel:+16133330101" class="tel text-decoration-none">(+1)-613-333-0101</a>
+          <div class="social-media">
+            <div class="ft-heading">
+              <p>Follow us</p>
+            </div>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/instagram (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/linkedin (2).png" alt=""></a>
+              </li>
+              <li class="list-group-item border-0 bg-transparent p-0 mx-1">
+                <a href="#"><img src="Images/facebook (2).png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footSec">
+          <h3>
+            Customer Service
+          </h3>
+          <ul class="list-group ">
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="tracking-form.html" class="text-decoration-none text-white">Track Order</a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Returns
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                My Account
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none  text-white">
+                FAQ
+              </a>
+            </li>
+            <li class="list-group-item border-0 bg-transparent p-0">
+              <a href="#" class="text-decoration-none text-white">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 copywrite text-center">
+          <hr>
+          <p>© 2025 – <a href="#">Taillora.</a> All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Bootstrap js links-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!--Custom js-->
+  <script src="./js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
